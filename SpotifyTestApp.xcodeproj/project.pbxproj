@@ -16,6 +16,8 @@
 		15C28EA32946BF1D00E62635 /* SpotifyTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EA22946BF1D00E62635 /* SpotifyTestAppTests.swift */; };
 		15C28EAD2946BF1D00E62635 /* SpotifyTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EAC2946BF1D00E62635 /* SpotifyTestAppUITests.swift */; };
 		15C28EAF2946BF1D00E62635 /* SpotifyTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EAE2946BF1D00E62635 /* SpotifyTestAppUITestsLaunchTests.swift */; };
+		15C28EBC2946BF2800E62635 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EBB2946BF2800E62635 /* NetworkManager.swift */; };
+		15C28EBE2946C18900E62635 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EBD2946C18900E62635 /* APIKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		15C28EA82946BF1D00E62635 /* SpotifyTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C28EAC2946BF1D00E62635 /* SpotifyTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyTestAppUITests.swift; sourceTree = "<group>"; };
 		15C28EAE2946BF1D00E62635 /* SpotifyTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		15C28EBB2946BF2800E62635 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		15C28EBD2946C18900E62635 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				15C28E942946BF1C00E62635 /* Assets.xcassets */,
 				15C28E962946BF1C00E62635 /* LaunchScreen.storyboard */,
 				15C28E992946BF1C00E62635 /* Info.plist */,
+				15C28EBB2946BF2800E62635 /* NetworkManager.swift */,
+				15C28EBD2946C18900E62635 /* APIKeys.swift */,
 			);
 			path = SpotifyTestApp;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C28EBC2946BF2800E62635 /* NetworkManager.swift in Sources */,
+				15C28EBE2946C18900E62635 /* APIKeys.swift in Sources */,
 				15C28E902946BF1B00E62635 /* ViewController.swift in Sources */,
 				15C28E8C2946BF1B00E62635 /* AppDelegate.swift in Sources */,
 				15C28E8E2946BF1B00E62635 /* SceneDelegate.swift in Sources */,
