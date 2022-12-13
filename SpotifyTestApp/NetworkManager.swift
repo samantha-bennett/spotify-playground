@@ -7,6 +7,7 @@
 
 import Foundation
 import OSLog
+import UIKit.UIImage
 
 class NetworkManager {
     public static var shared: NetworkManager = {
@@ -44,6 +45,17 @@ class NetworkManager {
 
 
     private init() {
+    }
+
+    private func isValidResponse(_ response: URLResponse) throws -> Bool {
+        guard let httpResponse = response as? HTTPURLResponse else { return false }
+        guard httpResponse.statusCode == 200 else {
+            logger.error("Network error: \(httpResponse)")
+            // throw?
+            throw SpotifyError.network
+        }
+
+        return true
     }
 }
 
@@ -119,6 +131,70 @@ extension NetworkManager {
             return markets.markets
         } catch {
             logger.error("Error getting markets \(error)")
+        }
+        return nil
+    }
+}
+
+extension NetworkManager {
+    enum SpotifyError: Error {
+        case authentication
+        case network
+        case decoding
+    }
+
+    func albums(offset: Int = 0) async throws -> [Album]? {
+        struct AlbumsResponse: Decodable {
+            let items: [Album]
+        }
+
+        let string = "https://api.spotify.com/v1/browse/new-releases"
+        guard var components = URLComponents(string: string) else { return nil }
+        components.queryItems = [
+            URLQueryItem(name: "limit", value: String(50)),
+            URLQueryItem(name: "country", value: "US"),
+            URLQueryItem(name: "offset", value: String(offset))
+        ]
+        let request = components.url.flatMap { URLRequest(url: $0) }
+
+        guard let request else { return nil }
+
+        // throw?
+        guard let session = await urlSession else {
+            throw SpotifyError.authentication
+        }
+
+        let (data, response) = try await session.data(for: request)
+
+        guard try isValidResponse(response) else { return nil }
+
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        do {
+            let results = try decoder.decode([String: AlbumsResponse].self, from: data)
+            return results["albums"]?.items
+        } catch {
+            logger.error("Error decoding album data \(error)")
+            throw SpotifyError.decoding
+        }
+    }
+}
+
+extension NetworkManager {
+    public func loadImage(url: URL) async -> UIImage? {
+        let request = URLRequest(url: url)
+
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+
+            guard try isValidResponse(response) else {
+                return nil                
+            }
+
+            let image = UIImage(data: data)
+            return image
+        } catch {
+            logger.error("Error fetching image \(error)")
         }
         return nil
     }

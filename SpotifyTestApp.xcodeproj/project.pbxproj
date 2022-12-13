@@ -18,6 +18,11 @@
 		15C28EAF2946BF1D00E62635 /* SpotifyTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EAE2946BF1D00E62635 /* SpotifyTestAppUITestsLaunchTests.swift */; };
 		15C28EBC2946BF2800E62635 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EBB2946BF2800E62635 /* NetworkManager.swift */; };
 		15C28EBE2946C18900E62635 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EBD2946C18900E62635 /* APIKeys.swift */; };
+		15C28EC02946EBB100E62635 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EBF2946EBB100E62635 /* Album.swift */; };
+		15C28EC22946F0FF00E62635 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EC12946F0FF00E62635 /* AlbumCollectionViewCell.swift */; };
+		15C28EC4294703BC00E62635 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C28EC3294703BC00E62635 /* ImageManager.swift */; };
+		15DF110C29483E840034AC7D /* SpotifyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF110B29483E840034AC7D /* SpotifyImage.swift */; };
+		15DF110E29483EB50034AC7D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DF110D29483EB50034AC7D /* Artist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		15C28EAE2946BF1D00E62635 /* SpotifyTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		15C28EBB2946BF2800E62635 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		15C28EBD2946C18900E62635 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		15C28EBF2946EBB100E62635 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		15C28EC12946F0FF00E62635 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		15C28EC3294703BC00E62635 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		15DF110B29483E840034AC7D /* SpotifyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyImage.swift; sourceTree = "<group>"; };
+		15DF110D29483EB50034AC7D /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,9 @@
 				15C28E992946BF1C00E62635 /* Info.plist */,
 				15C28EBB2946BF2800E62635 /* NetworkManager.swift */,
 				15C28EBD2946C18900E62635 /* APIKeys.swift */,
+				15DF110F29483EBB0034AC7D /* Models */,
+				15C28EC12946F0FF00E62635 /* AlbumCollectionViewCell.swift */,
+				15C28EC3294703BC00E62635 /* ImageManager.swift */,
 			);
 			path = SpotifyTestApp;
 			sourceTree = "<group>";
@@ -131,6 +144,16 @@
 				15C28EAE2946BF1D00E62635 /* SpotifyTestAppUITestsLaunchTests.swift */,
 			);
 			path = SpotifyTestAppUITests;
+			sourceTree = "<group>";
+		};
+		15DF110F29483EBB0034AC7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15C28EBF2946EBB100E62635 /* Album.swift */,
+				15DF110B29483E840034AC7D /* SpotifyImage.swift */,
+				15DF110D29483EB50034AC7D /* Artist.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +290,13 @@
 				15C28EBC2946BF2800E62635 /* NetworkManager.swift in Sources */,
 				15C28EBE2946C18900E62635 /* APIKeys.swift in Sources */,
 				15C28E902946BF1B00E62635 /* ViewController.swift in Sources */,
+				15DF110C29483E840034AC7D /* SpotifyImage.swift in Sources */,
+				15C28EC4294703BC00E62635 /* ImageManager.swift in Sources */,
 				15C28E8C2946BF1B00E62635 /* AppDelegate.swift in Sources */,
 				15C28E8E2946BF1B00E62635 /* SceneDelegate.swift in Sources */,
+				15C28EC02946EBB100E62635 /* Album.swift in Sources */,
+				15DF110E29483EB50034AC7D /* Artist.swift in Sources */,
+				15C28EC22946F0FF00E62635 /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
